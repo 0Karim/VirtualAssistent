@@ -8,4 +8,5 @@
     <string name="log_out">Log Out</string>
     <string name="feedback">Feedback</string>
     <string name="settings">Account Settings</string>
+    <string name="user_name">Username</string>
 </resources>

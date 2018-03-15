@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,18 +27,22 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Virtual Assistant Chat");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
     @Override
     protected void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser == null){
+  /*      if(currentUser == null){
             Intent startIntent = new Intent(MainActivity.this,StartActivity.class);
             startActivity(startIntent);
             finish();
-        }
+
+        }*/
+
     }
 
     @Override
@@ -64,4 +70,5 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+
 }
